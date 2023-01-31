@@ -7,7 +7,7 @@ import { Course } from '../models/course.model';
 @Injectable()
 export class CourseService {
 
-  public API : string = 'https://dummyjson.com/carts'
+  public API : string = 'http://localhost:3000/courses'
 
   constructor(
     public http: HttpClient

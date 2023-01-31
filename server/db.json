@@ -1,0 +1,22 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Name 1",
+      "description": "description 1",
+      "fee": 10
+    },
+    {
+      "id": 2,
+      "name": "Name 2",
+      "description": "description 2",
+      "fee": 11
+    },
+    {
+      "name": "Name 3",
+      "description": "description 3",
+      "fee": "15",
+      "id": 3
+    }
+  ]
+}
