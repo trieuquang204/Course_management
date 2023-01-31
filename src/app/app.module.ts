@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -9,6 +10,9 @@ import { CoursesComponent } from './components/courses/courses.component';
 import { CourseListComponent } from './components/course-list/course-list.component';
 import { CourseAddComponent } from './components/course-add/course-add.component';
 import { CourseEditComponent } from './components/course-edit/course-edit.component';
+
+// service
+import { CourseService } from './services/course.service';
 
 const appRoutes : Routes = [
  {
@@ -50,9 +54,12 @@ const appRoutes : Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [],
+  providers: [
+    CourseService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
