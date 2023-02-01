@@ -20,4 +20,8 @@ export class CourseService {
   addCourse(course : any) : Observable<Course> {
     return this.http.post(this.API, course)
   }
+
+  deleteCourse(id: any) : Observable<Course> {
+    return this.http.delete(`${this.API}/${id}`)
+  }
 }

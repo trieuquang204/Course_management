@@ -29,4 +29,19 @@ export class CourseListComponent implements OnInit, OnDestroy {
       this.subscription.unsubscribe();
     }
   }
+
+  onDeleteCourse(id: any) {
+    this.subscription = this.courseService.deleteCourse(id).subscribe((data : any) => {
+      this.updateDataAfterDelete(id)
+    })
+  }
+
+  updateDataAfterDelete(id: number) {
+    for(let i = 0; i < this.courses.length; i++) {
+      if(this.courses[i].id == id) {
+        this.courses.splice(i, 1);
+        break;
+      }
+    }
+  }
 }
