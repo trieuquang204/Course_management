@@ -7,3 +7,27 @@
 
 - Nếu dùng ngModel trong form:
 [ngModelOptions]="{standalone: true}"
+
+
++++ Form trong angular
+- Có hai loại form:
+1, Template drivent form : Sử dụng code html để tạo form trong angular
+2, Reactive form: Sử dụng code typescript để tạo ra form
+
+B1: * Để làm việc với template-driven form cần import FormsModule trong import của appModule
+b2: Xây dựng form bên phía template: (file html)
+b3: Sử dụng ngModel đọc & ghi dữ liệu cho input
+
+https://stackoverflow.com/questions/49699067/property-has-no-initializer-and-is-not-definitely-assigned-in-the-construc
+
+b4: Sử dụng template reference variable
+b5: Bổ sung name cho các ô input
+b6: Thêm sự kiện (ngSubmit)="onSubmitForm(tên form . value )"
+b7: Bỏ thuộc tính [ngModelOptions]="{standalone: true}" mới lấy đc giá trị
+
+** Trạng thái:
+- Control được truy cập, focus, click vào: ng-touched (Đúng), ng-untouched(Sai)
+- Giá trị control đã có sự thay đổi ng-dirty(Đúng), ng-pristine(sai)
+- Giá trị control hợp lệ : ng-valid(đúng), ng-invalid (sai)
+
+* Gán tên cho form:

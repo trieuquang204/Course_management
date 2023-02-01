@@ -14,6 +14,7 @@ import { CourseEditComponent } from './components/course-edit/course-edit.compon
 
 // service
 import { CourseService } from './services/course.service';
+import { TemplateFormComponent } from './components/template-form/template-form.component';
 
 const appRoutes : Routes = [
  {
@@ -52,6 +53,7 @@ const appRoutes : Routes = [
     CourseListComponent,
     CourseAddComponent,
     CourseEditComponent,
+    TemplateFormComponent,
   ],
   imports: [
     BrowserModule,
