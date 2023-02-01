@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 import { CourseService } from 'src/app/services/course.service';
 import { Course } from 'src/app/models/course.model';
@@ -9,19 +10,23 @@ import { Course } from 'src/app/models/course.model';
   styleUrls: ['./course-list.component.css']
 })
 export class CourseListComponent implements OnInit, OnDestroy {
-public courses : any = [];
+
+  public subscription? : Subscription;
+  public courses : any = [];
 
   constructor(
     public courseService : CourseService
   ) {}
 
   ngOnInit() {
-    this.courseService.getAllCourses().subscribe((data : any) => {
+    this.subscription = this.courseService.getAllCourses().subscribe((data : any) => {
       this.courses = data;
     })
   }
 
-  ngOnDestroy(): void {
-
+  ngOnDestroy() {
+    if(this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 }

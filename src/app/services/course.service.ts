@@ -16,4 +16,8 @@ export class CourseService {
   getAllCourses() : Observable<Course> {
     return this.http.get(this.API)
   }
+
+  addCourse(course : any) : Observable<Course> {
+    return this.http.post(this.API, course)
+  }
 }

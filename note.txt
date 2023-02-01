@@ -1,0 +1,9 @@
++ Sử dung ngModel (2 ways binding) :
+ [(ngModel)]="ten bien"
+
+ + Khai báo trong app module :
+ import { FormsModule } from '@angular/forms';
+ -> Khai báo trong phần import
+
+- Nếu dùng ngModel trong form:
+[ngModelOptions]="{standalone: true}"

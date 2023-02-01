@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -36,7 +37,7 @@ const appRoutes : Routes = [
       component: CourseAddComponent
     },
     {
-      path: ':id',
+      path: ':id/edit',
       component: CourseEditComponent
     },
   ]
@@ -55,6 +56,7 @@ const appRoutes : Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [
