@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -15,6 +15,7 @@ import { CourseEditComponent } from './components/course-edit/course-edit.compon
 // service
 import { CourseService } from './services/course.service';
 import { TemplateFormComponent } from './components/template-form/template-form.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 
 const appRoutes : Routes = [
  {
@@ -54,11 +55,13 @@ const appRoutes : Routes = [
     CourseAddComponent,
     CourseEditComponent,
     TemplateFormComponent,
+    ReactiveFormComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [

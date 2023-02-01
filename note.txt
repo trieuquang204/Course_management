@@ -31,3 +31,11 @@ b7: Bỏ thuộc tính [ngModelOptions]="{standalone: true}" mới lấy đc gi�
 - Giá trị control hợp lệ : ng-valid(đúng), ng-invalid (sai)
 
 * Gán tên cho form:
+
+
+*** Reactive Form:
+b1: import ReactiveFormsModule trong import cua app module
+b2: Tại file .ts import
+import { FormBuilder, FormGroup, Validator } from '@angular/forms';
+
+- FormBuilder cần inject vào constructor:
